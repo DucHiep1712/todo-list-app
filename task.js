@@ -23,6 +23,6 @@ taskWritten.addEventListener("click", function newTask() {
     alert("Task added successfully!");
     tasks.push(taskInput);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    location.href = "http://127.0.0.1:5500/index.html";
+    location.href = "https://duchiep1712.github.io/todo-list-app/task.html";
   }
 });
