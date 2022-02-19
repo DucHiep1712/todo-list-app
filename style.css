@@ -1,0 +1,253 @@
+body {
+    display: flex;
+    justify-content: center;
+    background:	#36393e;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+::selection {
+    background-color: #6050dc;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-start;
+    transform: scale(.75);
+}
+
+/*Add button style*/
+.add-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    background-color: #424549;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9;
+    top: 654px;
+    right: calc(100vw / 2 - 152px);
+    transition: border-radius 128ms, background 128ms;
+    transition: color .15s ease-out, background-color .15s ease-out;
+    color: hsl(139, calc((1, 1) * 47.3%), 43.9%);
+}
+
+.add-btn:hover {
+    border-radius: 36%;
+    transition: 180ms;
+    color: #fff;
+}
+
+.add-btn:hover .popper-boi {
+    opacity: 1;
+}
+
+/*Green button when hovered*/
+.green-boi:hover {
+    background: hsl(139, calc((1, 1) * 47.3%), 43.9%);
+}
+
+/*Styling the pop box*/
+.popper-boi {
+    background-color: black;
+    padding: 0.1% 1rem;
+    position: absolute;
+    top: 50%;
+    right: 144%;
+    transform: translateY(-50%) scale(0.98);
+    width: max-content;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 64ms;
+}
+
+.popper-boi::before {
+    content: '';
+    position: absolute;
+    left: 82%;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background: black;
+    width: 28px;
+    height: 28px;
+    z-index: -1;
+}
+
+/*List items style*/
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    transition: 0.2s;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    overflow: hidden;
+    background-color: #54575b;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover {
+    background-color: #8d8f91;
+}
+
+ul li.checked {
+    background-color: hsl(139, calc((1, 1) * 47.3%), 43.9%);
+    color: #fff;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 30%;
+    left: 12px;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 4px;
+    z-index: 1;
+}
+
+li span {
+    height: 100%;
+}
+
+/*Close button style*/
+.close {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    padding: 0 2px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 1s ease;
+}
+
+.close:hover {
+    width: 100%;
+    background-color: #f94b48;
+}
+
+#header {
+    position: relative;
+}
+
+#welcome {
+    margin-top: 30px;
+    font-size: 80%;
+    text-align: center;
+    opacity: 0.6;
+}
+
+#profile-img {
+    position: absolute;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 4.54rem;
+}
+
+#main-container {
+    padding: 2rem 0 0 0;
+    width: 344px;
+    height: 684px;
+    background-color: #282b30;
+    border-radius: 40px;
+    border: 3px solid #99aab5;
+    color: white;
+    text-align: center;
+    overflow-y: scroll;
+    box-sizing: content-box;
+    scrollbar-width: 0;
+}
+
+#main-container::-webkit-scrollbar {
+    display: none;
+}
+
+.divider {
+    border-bottom: 10px solid #99aab5;
+    border-radius: 4px;
+    transform: scale(.75);
+}
+
+#task-container {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*Task input style*/
+#task-input {
+    position: relative;
+    margin: 2rem 0;
+    padding: 0.5rem;
+    width: 80%;
+    height: 400px;
+    border-radius: 10px;
+    background-color: #424549;
+    outline: none;
+    resize: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#written-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 28px;
+}
+
+/*Decorating task-written button*/
+.task-written {
+    width: 56px;
+    height: 56px;
+    background-color: #282b30;
+    border-radius: 50%;
+    border-width: 0;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transition: border-radius 0.5s ease;
+    cursor: pointer;
+}
+
+.task-written:hover {
+    background-color: #54575b;
+    border-radius: 30%;
+    color: hsl(139, calc((1, 1) * 47.3%), 43.9%);
+}
+
+.task-written::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    height: 16px;
+    width: 8px;
+    z-index: 1;
+    transition: color 0.5s ease;
+}
