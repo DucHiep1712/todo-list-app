@@ -2,22 +2,58 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css\style.css" />
+        <link rel="stylesheet" href="css\responsive.css" />
     </head>
     <body>
         <div id="main-container">
+            <span id="vertical-navbar">
+                <img id="navbar-img" src="resoures\pictures\profile-img.jpg">
+                <span class="navbar-item" onclick="location.href='index.html'">Home</span>
+                <span class="navbar-item" onclick="location.href='task.html'">Add a task</span>
+                <span class="navbar-item" onclick="location.href='about.html'">About me</span>
+            </span>
+
             <div id="header">
                 <span id="welcome">Hi, Duc Hiep</span>
                 <img id="profile-img" src="resoures\pictures\profile-img.jpg">
                 <h3 id="date">My to do list</h3>
             </div>
+
             <div class="divider"></div>
+
             <div>
-                <textarea id="task-input" placeholder="Write your task here..."></textarea>
+                <div>
+                    <textarea id="task-input" placeholder="Write your task here..."></textarea>
+                </div>
+                <div id="written-container">
+                    <button id="task-done" class="task-written"></button>
+                </div>
             </div>
-            <div id="written-container">
-                <button id="task-done" class="task-written"></button>
+            
+        </div>
+
+        <div id="nav-bar">
+            <div>
+                <button id="home-btn" onclick="location.href='index.html'">
+                    <img class="icon" src="resoures\icons\home.png">
+                </button>
             </div>
-        <script src="task.js"></script>
+            
+            <div>
+                <button class="add-btn2 green-boi" onclick="location.href='task.html'">
+                    <svg class="circleIcon-3489FI" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div>
+                <button id="about-btn" onclick="location.href='about.html'">
+                    <img class="icon" src="resoures\icons\about.png">
+                </button>
+            </div>
+        </div>
+        <script src="js\task.js"></script>
     </body>
 </html>
